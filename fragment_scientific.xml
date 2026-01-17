@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <!-- شاشة العرض -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonGrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.25">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="end|center_vertical">
+
+            <TextView
+                android:id="@+id/tvExpression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:maxLines="2"
+                android:ellipsize="start" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"
+                android:maxLines="1"
+                android:ellipsize="start" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- شبكة الأزرار العلمية -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:columnCount="5"
+        app:rowCount="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardDisplay">
+
+        <!-- الدوال المثلثية -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSin"
+            style="@style/CalculatorButton.Function"
+            android:text="sin" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCos"
+            style="@style/CalculatorButton.Function"
+            android:text="cos" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTan"
+            style="@style/CalculatorButton.Function"
+            android:text="tan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLog"
+            style="@style/CalculatorButton.Function"
+            android:text="log" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLn"
+            style="@style/CalculatorButton.Function"
+            android:text="ln" />
+
+        <!-- الدوال المتبقية -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPi"
+            style="@style/CalculatorButton.Function"
+            android:text="π" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnE"
+            style="@style/CalculatorButton.Function"
+            android:text="e" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSqrt"
+            style="@style/CalculatorButton.Function"
+            android:text="√" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPower"
+            style="@style/CalculatorButton.Function"
+            android:text="^" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFact"
+            style="@style/CalculatorButton.Function"
+            android:text="!" />
+
+        <!-- الأقواس -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLeftParenthesis"
+            style="@style/CalculatorButton.Operator"
+            android:text="(" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRightParenthesis"
+            style="@style/CalculatorButton.Operator"
+            android:text=")" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPercent"
+            style="@style/CalculatorButton.Operator"
+            android:text="%" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/CalculatorButton.Special"
+            android:text="C" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackspace"
+            style="@style/CalculatorButton.Special"
+            android:text="⌫" />
+
+        <!-- الأرقام -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn7"
+            style="@style/CalculatorButton.Number"
+            android:text="7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn8"
+            style="@style/CalculatorButton.Number"
+            android:text="8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn9"
+            style="@style/CalculatorButton.Number"
+            android:text="9" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDivide"
+            style="@style/CalculatorButton.Operator"
+            android:text="÷" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMemoryClear"
+            style="@style/CalculatorButton.Function"
+            android:text="MC" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn4"
+            style="@style/CalculatorButton.Number"
+            android:text="4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn5"
+            style="@style/CalculatorButton.Number"
+            android:text="5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn6"
+            style="@style/CalculatorButton.Number"
+            android:text="6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMultiply"
+            style="@style/CalculatorButton.Operator"
+            android:text="×" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMemoryRecall"
+            style="@style/CalculatorButton.Function"
+            android:text="MR" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn1"
+            style="@style/CalculatorButton.Number"
+            android:text="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn2"
+            style="@style/CalculatorButton.Number"
+            android:text="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn3"
+            style="@style/CalculatorButton.Number"
+            android:text="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubtract"
+            style="@style/CalculatorButton.Operator"
+            android:text="-" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMemoryPlus"
+            style="@style/CalculatorButton.Function"
+            android:text="M+" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn0"
+            style="@style/CalculatorButton.Number"
+            android:text="0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDecimal"
+            style="@style/CalculatorButton.Operator"
+            android:text="." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEquals"
+            style="@style/CalculatorButton.Equals"
+            android:text="=" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
+            style="@style/CalculatorButton.Operator"
+            android:text="+" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMemoryMinus"
+            style="@style/CalculatorButton.Function"
+            android:text="M-" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

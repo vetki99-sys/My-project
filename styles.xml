@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- أنماط الأزرار -->
+
+    <!-- زر الرقم -->
+    <style name="CalculatorButton.Number" parent="Widget.Material3.Button">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="backgroundTint">@color/button_number</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+        <item name="rippleColor">@color/ripple</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- زر العملية -->
+    <style name="CalculatorButton.Operator" parent="Widget.Material3.Button">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="backgroundTint">@color/button_operator</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+        <item name="rippleColor">@color/ripple</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- زر خاص (مسح، حذف) -->
+    <style name="CalculatorButton.Special" parent="Widget.Material3.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="backgroundTint">@color/button_special</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+        <item name="rippleColor">@color/ripple</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- زر المساواة -->
+    <style name="CalculatorButton.Equals" parent="Widget.Material3.Button">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="backgroundTint">@color/button_equals</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+        <item name="rippleColor">@color/ripple</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- زر العلم (للعمليات العلمية) -->
+    <style name="CalculatorButton.Function" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/on_secondary_container</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:insetTop">2dp</item>
+        <item name="android:insetBottom">2dp</item>
+        <item name="android:insetLeft">2dp</item>
+        <item name="android:insetRight">2dp</item>
+        <item name="rippleColor">@color/ripple</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- زر صغير (للموضع) -->
+    <style name="CalculatorButton.Small" parent="Widget.Material3.Button.IconButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="iconTint">@color/on_surface</item>
+        <item name="rippleColor">@color/ripple</item>
+    </style>
+
+    <!-- شاشة العرض -->
+    <style name="CalculatorDisplay">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/display_text</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- شاشة التعبير -->
+    <style name="CalculatorDisplay.Expression" parent="CalculatorDisplay">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <!-- شاشة النتيجة -->
+    <style name="CalculatorDisplay.Result" parent="CalculatorDisplay">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/display_result</item>
+    </style>
+
+    <!-- تبويبات الآلة الحاسبة -->
+    <style name="CalculatorTabLayout" parent="Widget.Material3.TabLayout">
+        <item name="tabMode">scrollable</item>
+        <item name="tabGravity">start</item>
+        <item name="tabIndicatorColor">@color/tab_indicator</item>
+        <item name="tabSelectedTextColor">@color/tab_selected</item>
+        <item name="tabTextColor">@color/tab_unselected</item>
+        <item name="tabIconTint">@color/tab_unselected</item>
+        <item name="tabRippleColor">@color/ripple</item>
+    </style>
+
+    <!-- بطاقة الشاشة -->
+    <style name="CalculatorCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/display_background</item>
+    </style>
+
+    <!-- صندوق الإدخال -->
+    <style name="CalculatorInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/outline</item>
+        <item name="hintTextColor">@color/on_surface_variant</item>
+    </style>
+
+    <!-- قائمة السجل -->
+    <style name="HistoryItem">
+        <item name="android:padding">16dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- عنوان القسم -->
+    <style name="SectionTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <!-- نص النتيجة الكبيرة -->
+    <style name="LargeResult">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

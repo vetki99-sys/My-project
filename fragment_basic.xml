@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.fragments.BasicFragment">
+
+    <!-- شاشة العرض -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonGrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.25">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <!-- التعبير الرياضي -->
+            <TextView
+                android:id="@+id/tvExpression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textSize="18sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:maxLines="2"
+                android:ellipsize="start"
+                app:layout_constraintBottom_toTopOf="@id/tvResult"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="123 + 456" />
+
+            <!-- النتيجة -->
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:maxLines="1"
+                android:ellipsize="start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvExpression"
+                tools:text="579" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- شبكة الأزرار -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:columnCount="4"
+        app:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardDisplay">
+
+        <!-- الصف الأول: الأقواس -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLeftParenthesis"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="("
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRightParenthesis"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text=")"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPercent"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="%"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/CalculatorButton.Special"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="C"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <!-- الصف الثاني: 7 8 9 ÷ -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn7"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="7"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn8"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="8"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn9"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="9"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDivide"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="÷"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <!-- الصف الثالث: 4 5 6 × -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn4"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="4"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn5"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="5"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn6"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="6"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMultiply"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="×"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <!-- الصف الرابع: 1 2 3 - -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn1"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn2"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="2"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn3"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="3"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubtract"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="-"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <!-- الصف الخامس: 0 . = + -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn0"
+            style="@style/CalculatorButton.Number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="0"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDecimal"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="."
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackspace"
+            style="@style/CalculatorButton.Special"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="⌫"
+            app:icon="@drawable/ic_backspace"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
+            style="@style/CalculatorButton.Operator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="+"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- أزرار إضافية -->
+    <LinearLayout
+        android:id="@+id/extraButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonGrid"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopy"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:icon="@drawable/ic_copy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:icon="@drawable/ic_share" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

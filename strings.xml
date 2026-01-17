@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- اسم التطبيق -->
+    <string name="app_name">آلة حاسبة ذكية</string>
+    <string name="app_description">آلة حاسبة احترافية متعددة الأوضاع</string>
+
+    <!-- أسماء التبويبات -->
+    <string name="tab_basic">أساسية</string>
+    <string name="tab_scientific">علمية</string>
+    <string name="tab_graphing">بيانية</string>
+    <string name="tab_financial">مالية</string>
+    <string name="tab_engineering">هندسية</string>
+    <string name="tab_programming">برمجية</string>
+    <string name="tab_statistical">إحصائية</string>
+    <string name="tab_time">زمنية</string>
+
+    <!-- الأزرار الأساسية -->
+    <string name="btn_0">0</string>
+    <string name="btn_1">1</string>
+    <string name="btn_2">2</string>
+    <string name="btn_3">3</string>
+    <string name="btn_4">4</string>
+    <string name="btn_5">5</string>
+    <string name="btn_6">6</string>
+    <string name="btn_7">7</string>
+    <string name="btn_8">8</string>
+    <string name="btn_9">9</string>
+    <string name="btn_decimal">.</string>
+    <string name="btn_clear">حذف</string>
+    <string name="btn_backspace">⌫</string>
+    <string name="btn_equals">=</string>
+
+    <!-- العمليات -->
+    <string name="op_add">+</string>
+    <string name="op_subtract">-</string>
+    <string name="op_multiply">×</string>
+    <string name="op_divide">÷</string>
+    <string name="op_percent">%</string>
+    <string name="op_power">^</string>
+    <string name="op_sqrt">√</string>
+    <string name="op_left_paren">(</string>
+    <string name="op_right_paren">)</string>
+
+    <!-- العمليات العلمية -->
+    <string name="func_sin">جا</string>
+    <string name="func_cos">جتا</string>
+    <string name="func_tan">ظا</string>
+    <string name="func_log">لو</string>
+    <string name="func_ln">ln</string>
+    <string name="func_pi">π</string>
+    <string name="func_e">e</string>
+    <string name="func_fact">!</string>
+
+    <!-- الذاكرة -->
+    <string name="memory_mc">مسح الذاكرة</string>
+    <string name="memory_mr">استدعاء الذاكرة</string>
+    <string name="memory_m_plus">إضافة للذاكرة</string>
+    <string name="memory_m_minus">طرح من الذاكرة</string>
+
+    <!-- الرسائل -->
+    <string name="error">خطأ</string>
+    <string name="copied_to_clipboard">تم النسخ للحافظة</string>
+    <string name="share_result">مشاركة النتيجة</string>
+    <string name="no_history">لا يوجد سجل بعد</string>
+    <string name="no_favorites">لا توجد مفضلات بعد</string>
+    <string name="delete">حذف</string>
+    <string name="cancel">إلغاء</string>
+    <string name="confirm">تأكيد</string>
+    <string name="clear_history">مسح السجل</string>
+    <string name="clear_history_confirm">هل أنت متأكد من مسح كل السجل؟</string>
+
+    <!-- الإعدادات -->
+    <string name="settings">الإعدادات</string>
+    <string name="theme">المظهر</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="theme_system">تلقائي</string>
+    <string name="language">اللغة</string>
+    <string name="angle_mode">وحدة الزوايا</string>
+    <string name="degrees">درجات</string>
+    <string name="radians">راديان</string>
+    <string name="precision">الأرقام العشرية</string>
+    <string name="vibration">الاهتزاز</string>
+    <string name="sound">الصوت</string>
+    <string name="history">السجل</string>
+    <string name="favorites">المفضلات</string>
+    <string name="about">حول</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="rate_app">تقييم التطبيق</string>
+    <string name="share_app">مشاركة التطبيق</string>
+    <string name="version">الإصدار</string>
+
+    <!-- القائمة -->
+    <string name="menu_history">السجل</string>
+    <string name="menu_favorites">المفضلات</string>
+    <string name="menu_settings">الإعدادات</string>
+    <string name="menu_about">حول</string>
+
+    <!-- الإشعارات -->
+    <string name="channel_general_name">عام</string>
+    <string name="channel_general_description">إشعارات عامة</string>
+    <string name="channel_ads_name">إعلانات</string>
+    <string name="channel_ads_description">إعلانات التطبيق</string>
+
+    <!-- الويدجت -->
+    <string name="widget_name">آلة حاسبة</string>
+
+    <!-- الأنظمة العددية -->
+    <string name="binary">ثنائي</string>
+    <string name="octal">ثماني</string>
+    <string name="decimal">عشري</string>
+    <string name="hexadecimal">ست عشري</string>
+
+    <!-- العمليات المالية -->
+    <string name="loan_payment">قسط القرض</string>
+    <string name="compound_interest">فائدة مركبة</string>
+    <string name="roi">العائد على الاستثمار</string>
+    <string name="discount">خصم</string>
+    <string name="tax">ضريبة</string>
+
+    <!-- العمليات الهندسية -->
+    <string name="area">مساحة</string>
+    <string name="volume">حجم</string>
+    <string name="perimeter">محيط</string>
+    <string name="surface_area">مساحة السطح</string>
+    <string name="convert_unit">تحويل وحدات</string>
+
+    <!-- العمليات الإحصائية -->
+    <string name="mean">المتوسط</string>
+    <string name="median">الوسيط</string>
+    <string name="mode">المنوال</string>
+    <string name="standard_deviation">الانحراف المعياري</string>
+    <string name="variance">التباين</string>
+    <string name="range">المدى</string>
+
+    <!-- العمليات الزمنية -->
+    <string name="date_difference">فرق التواريخ</string>
+    <string name="add_time">إضافة وقت</string>
+    <string name="subtract_time">طرح وقت</string>
+    <string name="time_converter">محول الوقت</string>
+</resources>
